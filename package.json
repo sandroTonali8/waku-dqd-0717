@@ -1,0 +1,35 @@
+{
+  "name": "waku-0716",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "waku dev",
+    "build": "waku build",
+    "start": "waku start"
+  },
+  "dependencies": {
+    "antd": "^5.26.5",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.10.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-server-dom-webpack": "19.1.0",
+    "socket.io-client": "^4.8.1",
+    "swiper": "^11.2.10",
+    "vite": "^7.0.4",
+    "vite-plugin-pages": "^0.33.1",
+    "waku": "0.23.4",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.11",
+    "@types/node": "^24.0.14",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "postcss": "8.5.6",
+    "sass": "^1.89.2",
+    "tailwindcss": "4.1.11",
+    "typescript": "5.8.3"
+  }
+}
