@@ -3,8 +3,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import styles from './index.module.scss'
+import { useState, useEffect } from 'react'
+import { getScore } from '../../services/score'
 
 export default function MatchList() {
+  const [score, setScore] = useState<{ homeTeam: API.TeamConfig[]; awayTeam: API.TeamConfig[]; homeScore: number[]; awayScore: number[] } | undefined>(undefined)
+  
+  useEffect(() => {
+    getScore().then(setScore)
+  }, [])
+
   return (
     <Swiper
       slidesPerView={5}

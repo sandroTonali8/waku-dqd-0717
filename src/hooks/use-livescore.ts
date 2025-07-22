@@ -20,7 +20,9 @@ export function useLiveScore() {
   const setScore = useScore((state) => state.updateScore)
 
   useEffect(() => {
-    const socket = io('/match-platform')
+    const socket = io("http://localhost:3000", {
+      path: "/match-platform"
+    })
     socket.on('score', (data) => setScore(data))
     return () => { socket.disconnect() }
   }, [])
