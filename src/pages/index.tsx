@@ -11,7 +11,7 @@ export default async function HomePage() {
       <div className='mb-10 flex justify-center shadow-md'>
         <Navigator/>
       </div>
-      <div>
+      <div className='ml-20 mr-20'>
         <MatchList/>
       </div>
     </>

@@ -12,7 +12,7 @@ declare namespace API {
   type PlayerItem = {
     id: number;
     name: string;
-    position: string;
+    position: string | null;
     shirtNumber: number;
   };
 
@@ -20,15 +20,15 @@ declare namespace API {
     id: number;
     name: string;
     shortName: string;
-    tla: string;
-    crest: string;
+    tla: string | null;
+    crest: string | null;
     coach: {
-      id: number;
-      name: string;
-      nationality: string;
+      id: number | null;
+      name: string | null;
+      nationality: string | null;
     };
-    leagueRank: number;
-    formation: string;
+    leagueRank: number | null;
+    formation: string | null;
     lineup: PlayerItem[];
     bench: PlayerItem[];
     statistics?: {
@@ -145,7 +145,7 @@ declare namespace API {
       name: string;
       code: string;
       type: string;
-      emblem: string;
+      emblem: string | null;
     };
 
     season: {

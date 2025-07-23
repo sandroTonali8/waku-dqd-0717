@@ -20,8 +20,8 @@ export function useLiveScore() {
   const setScore = useScore((state) => state.updateScore)
 
   useEffect(() => {
-    const socket = io("http://localhost:3000", {
-      path: "/match-platform"
+    const socket = io("https://api.football-data.org/v4", {
+      path: "/matches"
     })
     socket.on('score', (data) => setScore(data))
     return () => { socket.disconnect() }
